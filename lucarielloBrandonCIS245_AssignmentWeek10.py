@@ -15,10 +15,18 @@ eName = str(input("Enter your name: "))
 eAddress = str(input("Enter your address: "))
 eNumber = str(input("Enter your phone number: "))
 
-c = csv.writer(open(fileName, "w"))
+
+
+
+c = open(fileName, "w")
+
 
 c.writerow([eName + eAddress + eNumber])
 
 c.close()
 
-cr = csv.reader(open(fileName, "r"))
+cr = open(fileName, "r")
+
+csv.reader(cr)
+
+cr.close()
