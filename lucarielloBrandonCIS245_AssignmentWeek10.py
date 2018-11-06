@@ -11,15 +11,14 @@ path = dirName + fileName
 dirCheck = os.path.exists(path)
 
 
-eName = input("Enter your name: ")
-eAddress = input("Enter your address: ")
-eNumber = input("Enter your phone number: ")
-  
+eName = str(input("Enter your name: "))
+eAddress = str(input("Enter your address: "))
+eNumber = str(input("Enter your phone number: "))
+
 c = csv.writer(open(fileName, "wb"))
 
-c.writerow(eName + eAddress + eNumber)
+c.writerow([eName + eAddress + eNumber])
 
 c.close()
 
 cr = csv.reader(open(fileName, "r"))
-
