@@ -18,3 +18,8 @@ eNumber = input("Enter your phone number: ")
 c = csv.writer(open(fileName, "wb"))
 
 c.writerow(eName + eAddress + eNumber)
+
+c.close()
+
+cr = csv.reader(open(fileName, "r"))
+
